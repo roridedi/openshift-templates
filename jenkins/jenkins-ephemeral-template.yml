@@ -40,7 +40,7 @@ objects:
     labels:
       app: ${JENKINS_SERVICE_NAME}
   spec:
-    replicas: 1
+    replicas: 3
     selector:
       name: ${JENKINS_SERVICE_NAME}
     strategy:
@@ -195,7 +195,7 @@ parameters:
 - description: Starting request of memory the container can use.
   displayName: Memory Request
   name: MEMORY_REQUEST
-  value: 512Mi
+  value: 2Gi
 - description: The OpenShift Namespace where the Jenkins ImageStream resides.
   displayName: Jenkins ImageStream Namespace
   name: NAMESPACE
